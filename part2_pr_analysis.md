@@ -51,3 +51,56 @@ Applications that need to restart consumption or skip to the latest messages ben
 directly from the new APIs. Since the update introduces additional methods without
 altering existing ones, backward compatibility is preserved while overall usability
 is enhanced.
+
+
+### Pull Request 2: Add lightweight batching interface to AIOKafkaProducer (PR #217)
+
+#### PR Summary
+
+This pull request introduces a lightweight batching interface for the
+AIOKafkaProducer to improve how messages are grouped and sent to Kafka. Before
+this change, batching behavior was largely implicit and tightly coupled with the
+producer’s internal logic, making it harder for users to control how batches
+were created and submitted.
+
+The new interface provides a clearer and more explicit way for callers to create
+batches, append messages, and submit them once they are ready. This improves
+flexibility while avoiding the complexity of heavier architectural changes that
+were discussed previously. The goal of the change is to offer better control over
+batching behavior without exposing internal implementation details or breaking
+existing producer guarantees such as message ordering.
+
+#### Technical Changes
+
+- Added a lightweight batching interface to the AIOKafkaProducer
+- Introduced clearer separation between internal batching logic and public API
+- Updated producer components to support explicit batch creation and submission
+- Modified message accumulator behavior to work with the new batching interface
+- Added or updated tests to validate batching behavior
+
+#### Implementation Approach
+
+The implementation focuses on making batching behavior more explicit while
+preserving existing producer guarantees. Instead of relying entirely on internal
+batch management, the producer now exposes a simple interface that allows callers
+to create a batch, append messages to it, and submit the batch when ready. This
+approach gives users clearer control over batching without requiring them to
+interact with low-level internals.
+
+Internally, the change builds on the existing message accumulator and producer
+workflow rather than replacing it. The batching interface acts as a controlled
+layer on top of the current logic, ensuring that message ordering and delivery
+semantics remain consistent. Design discussions in the pull request also address
+potential edge cases, such as interactions between direct send calls and batch
+submission, and ensure that the final design avoids unexpected behavior.
+
+By keeping the interface lightweight and focused, the implementation balances
+flexibility with safety and maintainability.
+
+#### Potential Impact
+
+This change improves the producer API by giving developers more explicit control
+over message batching. Applications that require fine-grained batching behavior
+can benefit from improved clarity and predictability. Since the change builds on
+existing producer mechanisms and does not remove existing APIs, the impact is
+primarily additive and backward-compatible, with minimal risk to existing users.
