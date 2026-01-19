@@ -40,3 +40,13 @@ Strictly Python-based repositories:
 
 Repository that is not Python-primary:
 - airbyte
+
+
+## Task 1.2: Python Repository Comparison
+
+| Repository Name | Primary Purpose / Functionality | Key Dependencies | Architecture Pattern | Target Use Case / Domain |
+|----------------|----------------------------------|------------------|----------------------|--------------------------|
+| aiokafka | Provides asynchronous Kafka client functionality for Python applications | asyncio, kafka-python | Asynchronous event-driven architecture  | Developers building real-time streaming and messaging systems |
+| archivematica |  |  |  |  |
+| beets |  |  |  |  |
+| MetaGPT |  |  |  |  |
