@@ -44,7 +44,7 @@ Repository that is not Python-primary:
 
 ## Task 1.2: Python Repository Comparison
 
-## Task 1.2: Python Repository Comparison
+
 
 | Repository Name | Primary Purpose / Functionality | Key Dependencies | Architecture Pattern | Target Use Case / Domain |
 |----------------|----------------------------------|------------------|----------------------|--------------------------|
