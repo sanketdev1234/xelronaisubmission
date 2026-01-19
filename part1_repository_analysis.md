@@ -44,9 +44,12 @@ Repository that is not Python-primary:
 
 ## Task 1.2: Python Repository Comparison
 
+## Task 1.2: Python Repository Comparison
+
 | Repository Name | Primary Purpose / Functionality | Key Dependencies | Architecture Pattern | Target Use Case / Domain |
 |----------------|----------------------------------|------------------|----------------------|--------------------------|
-| aiokafka | Provides asynchronous Kafka client functionality for Python applications | asyncio, kafka-python | Asynchronous event-driven architecture  | Developers building real-time streaming and messaging systems |
-| archivematica |  |  |  |  |
-| beets |  |  |  |  |
-| MetaGPT |  |  |  |  |
+| aiokafka | Provides asynchronous Kafka client functionality for Python applications | asyncio, kafka-python | Asynchronous event-driven architecture | Developers building real-time streaming and messaging systems |
+| archivematica | Automates digital preservation workflows for long-term archival storage | Django, Celery, Python standard libraries | Modular workflow-based architecture | Libraries, museums, and institutions managing digital archives |
+| beets | Manages and organizes music collections using a command-line interface | Python standard library, music metadata libraries | Plugin-based modular architecture | Users managing and organizing large music collections |
+| MetaGPT | Provides a framework for building and coordinating AI agents for complex tasks | Python standard library, LLM-related libraries | Agent-based architecture | Developers and researchers building multi-agent AI systems |
+
