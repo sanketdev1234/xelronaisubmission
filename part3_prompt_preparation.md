@@ -1,4 +1,11 @@
+**Selected Repository:** aiokafka  
+**Repository Link:** https://github.com/aio-libs/aiokafka  
+
+**Selected Pull Request:** PR #193 – Added seek_to_beginning and seek_to_end API  
+**Pull Request Link:** https://github.com/aio-libs/aiokafka/pull/193
+
 # Part 3: Prompt Preparation
+
 ## Task 3.1: Comprehensive Prompt Documentation
 
 ### 3.1.1 Repository Context

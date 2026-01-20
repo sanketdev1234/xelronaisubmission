@@ -2,6 +2,9 @@
 ## Task 2.1: PR Selection and Comprehension
 ### Pull Request 1: Added seek_to_beginning and seek_to_end API (PR #193)
 
+**Pull Request Link:**  
+https://github.com/aio-libs/aiokafka/pull/193
+
 #### PR Summary
 
 This pull request introduces two new consumer API methods, `seek_to_beginning` and
@@ -54,6 +57,9 @@ is enhanced.
 
 
 ### Pull Request 2: Add lightweight batching interface to AIOKafkaProducer (PR #217)
+
+**Pull Request Link:**  
+https://github.com/aio-libs/aiokafka/pull/217
 
 #### PR Summary
 
